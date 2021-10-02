@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>
+            Elderoid
+        </title>
+        <link rel="icon" href="media/icon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/00fa34dcc9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="media/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="instructions.html">INSTRUCTIONS</a></li>
+                        <li><a href="policy.html">POLICY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <h1>Android for the Elderly</h1>
+                <p>Elderoid is an Android Launcher app that organizes the most basic and essential Android features 
+                    in a very intuitive layout. <br>Also, you can always rely on Netie, the Elderoid companion!<br>He
+                    will be helping and guiding you through this new and exciting adventure!</p>
+                <a href="https://play.google.com/store/apps/details?id=com.alcachofra.elderoid" class="hero-btn" target="_blank">Download at Google Play</a>
+            </div>
+        </section>
+
+        <!---------- Features ---------->
+
+        <section class="features">
+            <h1>Features</h1>
+            <p>Elderoid offers many features that will help you navigate through your smartphone very easily.<br>
+                That's what we are aiming for! Everyone should be able to use technology, right?</p>
+            <div class="row">
+                <div class="feature-col">
+                    <h3><u>Large</u> buttons and icons!</h3>
+                    <p>We understand users might have some kind of visual impairment, and it's important for us that everyone is able to use Elderoid. 
+                        That said, we made the buttons and icons as large as possible!</p>
+                    <img src="media/large.png">
+                </div>
+                <div class="feature-col">
+                    <h3><u>Flexible</u> user interface!</h3>
+                    <p>Depending on the user's preferences, Elderoid may provide diferent features and visual components. 
+                        That means the home page layout has to adapt to those preferences in order to keep a clean, natural look.</p>
+                    <img src="media/flexible.png">
+                </div>
+                <div class="feature-col">
+                    <h3>The kindest <u>companion</u>!</h3>
+                    <p>Throughout your navigation, Netie will always be there to help. He will give you tips, explain every feature and even ask you questions. 
+                        If you are lost, all you have to do is click him. Also, he's cute, is he not?</p>
+                    <img src="media/expressions.png">
+                </div>
+            </div> 
+            <div class="row">
+                <div class="feature-col">
+                    <h3><u>Application</u> manager!</h3>
+                    <p>You can choose which applications, installed in your device, should be made available. 
+                        Then, you can launch and use them from inside Elderoid! This is useful if you want to play games, for example.</p>
+                    <img src="media/apps.png">
+                </div>
+                <div class="feature-col">
+                    <h3>Four day weather <u>forecast</u>!</h3>
+                    <p>Among many exciting features Elderoid provides, weather forecast may be one of the most useful. 
+                        It's always good to know if tomorrow is going to be a rainy day! Netie will tell you the temperature range and climate.</p>
+                    <img src="media/forecast.png">
+                </div>
+                <div class="feature-col">
+                    <h3><u>Game</u> suggestions!</h3>
+                    <p>Elderoid even suggests new games that are easy to understand and will exercise the brain of the user! 
+                        Challenging yourself with puzzle and memory games lowers your chances of developing cognitive impairments.</p>
+                    <img src="media/suggestions.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="feature-col">
+                    <h3><u>Camera</u> and photo <u>gallery</u>!</h3>
+                    <p>Access to the device camera is also provided, as long as it has one. With this feature also comes a simple 
+                        gallery, so you can keep track of your beautiful photographs! You can even zoom in and out of your pictures.</p>
+                    <img src="media/photos.png">
+                </div>
+                <div class="feature-col">
+                    <h3><u>Contact manager!</u></h3>
+                    <p>If you need to store contact information like a phone book, Elderoid also provides a feature for that.
+                        You can easily save new contacts and call the ones you already saved. Perfect to keep in touch with family and friends!
+                    </p>
+                    <img src="media/contacts.png">
+                </div>
+                <div class="feature-col">
+                    <h3>Handy <u>flashlight!</u></h3>
+                    <p>A flashlight toggle button is also provided, in case your device has one. It can be found in the upper left corner of
+                        the home page. It's perfect for when the lights go out! You won't have to be afraid of the darkness anymore!</p>
+                    <img src="media/flashlight.png">
+                </div>
+            </div>
+        </section>
+
+        <!---------- Footer ---------->
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>There's no "us", who am I trying to trick! I'm a student in electronics, telecommunications and computers.<br>
+                I designed and developed Elderoid all by myself, so anyone can use it for free.</p>
+            <div class="icons">
+                <a href="https://www.instagram.com/alcachofraz/" class="icon" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Alcachofraz/Elderoid" class="icon" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            <p>Made with <i class="fa fa-heart"></i> by Alcachofra</p>
+        </section>
+
+        <!---------- JavaScript for Toggle Menu ---------->
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>
