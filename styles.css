@@ -20,7 +20,7 @@
     background-image: linear-gradient(
         rgba(163, 147, 121, 0.7), 
         rgba(58, 55, 52, 0.5)),
-        url(media/backgrounds/1.png);
+        url(media/backgrounds/1.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -151,17 +151,17 @@ nav .fa{
     text-align: center;
     padding-top: 100px;
 }
-h1 {
+.features h1 {
     font-size: 36px;
     font-weight: 600;
 }
-p {
+.features p {
     color: gray;
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
     padding: 10px;
-    margin-bottom: 4%;
+    margin-bottom: 48px;
 }
 .row {
     display: flex;
@@ -237,7 +237,7 @@ div img {
     background-image: linear-gradient(
         rgba(171, 139, 126, 0.8), 
         rgba(91, 59, 46, 0.7)),
-        url(media/backgrounds/2.png);
+        url(media/backgrounds/2.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -458,8 +458,26 @@ div img {
     padding: 15px;
     margin-bottom: 17px;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid #757575;
     box-sizing: border-box;
+}
+.send-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #757575;
+    border: 1px solid #888;
+    background: rgba(91, 59, 46, 0.1); 
+    padding: 12px 34px;
+    font-size: 14px;
+    position: relative; 
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+.send-btn:hover {
+    border: 1px solid var(--reddish);
+    background: var(--reddish);
+    transition: 0.5s;
+    color: white;
 }
 .profile {
     position: relative;
@@ -510,6 +528,7 @@ div img {
     margin: auto;
     padding-top: 80px;
     padding-bottom: 50px;
+    text-align: center;
 }
 .instructions h1 {
     padding-top: 0;
@@ -518,47 +537,139 @@ div img {
 .instructions p {
     margin-bottom: 0;
 }
-.instructions-col {
+.instruction-slideshow {
+    position: relative;
     display: flex;
     flex-direction: column;
     background: var(--milk);
     border-radius: 10px;
     transition: 0.5s;
-    flex-basis: 15%;
-    margin-top: 40px;
+    margin: auto;
     padding: 15px 25px;
     box-sizing: border-box;
+    height: 580px;
+    width: 40%;
+    margin-top: 56px;
+    margin-bottom: 0;
 }
-.instructions-col:hover {
+.instruction-slideshow:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
-.instructions-col h5 {
+.instruction-slideshow h5 {
+    padding-top: 10px;
     margin: auto;
 }
-.instructions-col p {
-    text-align: center;
+.instruction-slideshow p {
+    display: flex;
+    align-items: center;
     flex: 1;
     font-size: 14px;
     line-height: 22px;
-    padding: 25px;
-    display: flex;
-    align-items: center;
-}
-.instructions-col img {
-    padding-top: 0;
-    border-radius: 6px;
+    padding: 8px;
     margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.instruction-slideshow img {
+    z-index: 1;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+    padding-top: 0;
+    margin: auto;
+    margin-top: 10px;
     align-items: center;
     margin-bottom: 10px;
     transition: 0.5s;
 }
-.instructions-col img:hover {
-    transform:scale(1.8);
+.instruction-slideshow img:hover {
+    transform: scale(1.8);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-@media(max-width: 850px) {
-    .instructions-col {
-        padding: 28px 0px;
+.instruction-slider {
+    z-index: 0;
+    margin: auto;
+    margin-top: 24px;
+    width: 100%;
+}
+  
+/* The slider itself */
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: rgba(91, 59, 46, 0.4);
+    border-radius: 8px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px; /* Set a specific slider handle width */
+    height: 22px; /* Slider handle height */
+    border-radius: 50%;
+    background: var(--reddish); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 22px; /* Set a specific slider handle width */
+    height: 22px; /* Slider handle height */
+    background: var(--reddish); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.prev, .next {
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    color: var(--reddish);
+    font-weight: bold;
+    font-size: 36px;
+    transition: 0.6s ease;
+    user-select: none;
+    padding: 3% 3% 3% 1%;     
+    margin: -3% -3% -3% -1%;
+}
+
+.next {
+    right: 25px;
+    padding: 3% 1% 3% 3%;
+    margin: -3% -1% -3% -3%;
+}
+
+@media(max-width: 980px) {
+    .instruction-slideshow {
+        width: 90%;
+        height: 640px;
+        padding: 28px 18px;
+    }
+
+    .instruction-slideshow .p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .instruction-slider {
+        width: 100%;
+    }
+
+    .prev, .next {
+        padding: 6% 6% 6% 6%;     
+        margin: -6% -6% -6% -6%;
+    }
+    .next {
+        right: 18px;
+        padding: 6% 6% 6% 6%;     
+        margin: -6% -6% -6% -6%;
     }
 }
