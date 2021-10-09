@@ -35,4 +35,4 @@ The Privacy page provides the privacy policy required by Google Play, that'll en
 
 The Contact page will display a contact form. The user can send a message with what's on his mind.
 
-![image](https://user-images.githubusercontent.com/75852333/135713458-c0020ee8-9c4e-4db3-b5f0-db35e9dd1f84.png)
+![image](https://user-images.githubusercontent.com/75852333/136674644-c2447b26-44bf-4f50-bd01-05762a9335fc.png)
